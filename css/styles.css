@@ -10,8 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 ul {
@@ -68,6 +67,10 @@ img {
   color: #fd9222;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ==============header=================== */
 
 .header {
@@ -105,9 +108,8 @@ img {
   transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-soc-icon:hover,
-.header-soc-icon:focus,
-.header-soc-icon:active {
+.header-soc-link:hover .header-soc-icon,
+.header-soc-link:active .header-soc-icon {
   stroke: #fd9222;
 }
 
@@ -221,12 +223,16 @@ img {
 }
 
 .hero-scroll-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29;
   letter-spacing: -0.03em;
   margin-left: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-scroll {
@@ -238,10 +244,28 @@ img {
   align-items: center;
   justify-content: center;
   border: none;
+  flex-shrink: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-svg-scroll {
   fill: #fd9222;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-scroll-link:hover,
+.hero-scroll-link:focus {
+  color: #fd9222;
+}
+
+.hero-scroll-link:hover .hero-scroll,
+.hero-scroll-link:focus .hero-scroll {
+  background-color: #fd9222;
+}
+
+.hero-scroll-link:hover .hero-svg-scroll,
+.hero-scroll-link:focus .hero-svg-scroll {
+  fill: #fff;
 }
 
 /* ==============features=================== */
@@ -253,12 +277,13 @@ img {
 
 .features-list {
   display: flex;
-  gap: 44px;
+  gap: 88px;
   padding: 0 18px;
 }
 
 .features-item {
   width: calc((100% - 176px) / 3);
+  position: relative;
 }
 
 .features-icon-border {
@@ -293,9 +318,47 @@ img {
   letter-spacing: -0.02em;
 }
 
-.features-line {
+.features-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(-88px / 2);
+  transform: translateY(-50%);
   width: 1px;
   height: 124px;
   background: rgba(255, 255, 255, 0.5);
-  margin-top: 60px;
+}
+
+/* ======================Focus only TAB======================= */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #fd9222;
+  outline-offset: 4px;
+  border-radius: 100px;
+}
+
+.header-menu-link:focus-visible {
+  color: #fd9222;
+}
+
+.header-logo:focus-visible {
+  outline: 2px solid #fd9222;
+  outline-offset: 4px;
+  border-radius: 100px;
+}
+
+.header-soc-link:focus-visible {
+  outline: 2px solid #fd9222;
+  outline-offset: 4px;
+  border-radius: 100px;
+}
+
+.header-soc-link:focus-visible .header-soc-icon {
+  stroke: #fd9222;
+}
+
+.hero-scroll-link:focus-visible {
+  outline: 2px solid #fd9222;
+  outline-offset: 4px;
+  border-radius: 100px;
 }

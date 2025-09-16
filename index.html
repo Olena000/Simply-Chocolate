@@ -26,7 +26,7 @@
     <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
-          <a class="header-logo" href="">
+          <a class="header-logo" href="#">
             <span class="header-logo-italic">SIMPLY</span>CHOCOLATE
             <img
               class="header-icon"
@@ -36,13 +36,13 @@
           </a>
           <ul class="header-menu-list">
             <li class="header-menu-item">
-              <a class="header-menu-link" href="">Home</a>
+              <a class="header-menu-link" href="#">Home</a>
             </li>
             <li class="header-menu-item">
-              <a class="header-menu-link" href="">How it’s made?</a>
+              <a class="header-menu-link" href="#">How it’s made?</a>
             </li>
             <li class="header-menu-item">
-              <a class="header-menu-link" href="">Chocolate is loved</a>
+              <a class="header-menu-link" href="#">Chocolate is loved</a>
             </li>
           </ul>
         </nav>
@@ -50,9 +50,10 @@
           <li class="header-soc-item">
             <a
               class="header-soc-link"
-              href=""
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram"
             >
               <svg class="header-soc-icon" width="24" height="24">
                 <use href="./img/icons.svg#icon-instagram"></use>
@@ -62,9 +63,10 @@
           <li class="header-soc-item">
             <a
               class="header-soc-link"
-              href=""
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook"
             >
               <svg class="header-soc-icon" width="24" height="24">
                 <use href="./img/icons.svg#icon-facebook"></use>
@@ -74,9 +76,10 @@
           <li class="header-soc-item">
             <a
               class="header-soc-link"
-              href=""
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Twitter"
             >
               <svg class="header-soc-icon" width="24" height="24">
                 <use href="./img/icons.svg#icon-twitter"></use>
@@ -95,21 +98,32 @@
             of pure delight!
           </h1>
           <div class="hero-buttons">
-            <button class="hero-btn" type="button">Buy now</button>
-            <a class="hero-made-link" href="">How it’s made</a>
-            <a class="hero-scroll-link" href=""
+            <button
+              class="hero-btn"
+              type="button"
+              aria-label="Buy now chocolate"
+            >
+              Buy now
+            </button>
+            <a
+              class="hero-made-link"
+              href="#"
+              aria-label="Learn how chocolate is made"
+              >How it’s made</a
+            >
+            <a class="hero-scroll-link" href="#features"
               >scroll down
-              <div class="hero-scroll">
+              <span class="hero-scroll">
                 <svg class="hero-svg-scroll" width="22" height="22">
                   <use href="./img/icons.svg#icon-fi-rr-angle-small-left"></use>
                 </svg>
-              </div>
+              </span>
             </a>
           </div>
         </div>
       </section>
       <!--========features============-->
-      <section class="features">
+      <section class="features" id="features">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
           <ul class="features-list">
@@ -127,7 +141,7 @@
                 Unsurpassed Taste and discover a new level of chocolate bliss.
               </p>
             </li>
-            <div class="features-line"></div>
+
             <li class="features-item">
               <div class="features-icon-border">
                 <svg class="features-icon" width="32" height="32">
@@ -143,7 +157,7 @@
                 in affordable luxury today.
               </p>
             </li>
-            <div class="features-line"></div>
+
             <li class="features-item">
               <div class="features-icon-border">
                 <svg class="features-icon" width="32" height="32">
